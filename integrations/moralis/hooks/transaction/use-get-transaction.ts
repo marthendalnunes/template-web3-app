@@ -18,7 +18,6 @@ export function useGetTransaction({ chain, transactionHash, enabled }: GetTransa
       return res.json() as Promise<GetTransactionResponse>
     },
     enabled,
-    useErrorBoundary: true,
   })
 }
 

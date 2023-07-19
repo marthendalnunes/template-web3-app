@@ -32,6 +32,8 @@ export function FormGetTransaction() {
     await refetch?.()
   }
 
+  console.log('test error', String(error))
+
   return (
     <div className="w-full">
       <form className="card flex w-full flex-col gap-4" onSubmit={handleSubmit(onsubmit)}>

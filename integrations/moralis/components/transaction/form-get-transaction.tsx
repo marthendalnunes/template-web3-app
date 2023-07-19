@@ -32,7 +32,7 @@ export function FormGetTransaction() {
     await refetch?.()
   }
 
-  console.log('test error', String(error))
+  console.log('test error', error, String(error))
 
   return (
     <div className="w-full">

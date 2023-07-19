@@ -11,6 +11,7 @@ export function useGetTransaction({ chain, transactionHash, enabled }: GetTransa
   return useQuery(['get-transaction', chain, transactionHash], {
     queryFn: async () => {
       const res = await fetch(`/integration/moralis/api/transaction/getTransaction?chain=${chain}&transactionHash=${transactionHash}&format=result`)
+      console.log('debug res', res)
       if (!res.ok) throw new Error(String(res))
 
       return res.json() as Promise<GetTransactionResponse>
